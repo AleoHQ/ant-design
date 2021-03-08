@@ -82,6 +82,11 @@ class MainContent extends Component {
   componentDidMount() {
     window.addEventListener('load', this.handleLoad);
     window.addEventListener('hashchange', this.handleHashChange);
+
+    const componentPage = /^\/?components/.test(location.pathname);
+    if (componentPage) {
+      this.changeThemeMode('dark');
+    }
   }
 
   static getDerivedStateFromProps(props, state) {
@@ -317,7 +322,7 @@ class MainContent extends Component {
     const { setTheme, theme: selectedTheme } = this.context;
     const { pathname, hash, query } = this.props.location;
     if (selectedTheme !== theme) {
-      setTheme(theme);
+      setTheme(theme, true);
       if (theme === 'default') {
         delete query.theme;
       } else {
