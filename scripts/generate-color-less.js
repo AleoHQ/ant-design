@@ -19,6 +19,7 @@ genCss(
         '@site-text-color': '@heading-color',
         '@site-markdown-code-bg': '@input-bg',
         ...aleoUI,
+        '@component-background': '@grey-1',
       },
     },
     {
