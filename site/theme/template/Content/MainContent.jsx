@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Link, browserHistory } from 'bisheng/router';
-import { Row, Col, Menu, Affix, Tooltip, Avatar, Dropdown } from 'antd';
+import { Row, Col, Menu, Affix, Tooltip, Avatar } from 'antd';
 import { injectIntl } from 'react-intl';
 import { LeftOutlined, RightOutlined, ExportOutlined } from '@ant-design/icons';
 import ContributorsList from '@qixian.cs/github-contributors-list';
@@ -8,7 +8,6 @@ import classNames from 'classnames';
 import get from 'lodash/get';
 import MobileMenu from 'rc-drawer';
 
-import ThemeIcon from './ThemeIcon';
 import Article from './Article';
 import PrevAndNext from './PrevAndNext';
 import Footer from '../Layout/Footer';
@@ -430,7 +429,6 @@ class MainContent extends Component {
         {menuItems}
       </Menu>
     );
-    const componentPage = /^\/?components/.test(location.pathname);
     return (
       <div className="main-wrapper">
         <Row>
@@ -449,13 +447,6 @@ class MainContent extends Component {
             <section className={mainContainerClass}>
               {this.renderMainContent({ theme, setIframeTheme })}
             </section>
-            {componentPage && (
-              <div className="fixed-widgets">
-                <Dropdown overlay={this.getThemeSwitchMenu()} placement="topCenter">
-                  <Avatar className="fixed-widgets-avatar" size={44} icon={<ThemeIcon />} />
-                </Dropdown>
-              </div>
-            )}
             <PrevAndNext prev={prev} next={next} />
             <Footer location={location} />
           </Col>
