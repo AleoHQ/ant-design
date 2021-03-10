@@ -5,6 +5,7 @@ const genCss = require('antd-pro-merge-less');
 const defaultVar = require('./default-vars');
 const dark = require('./dark-vars');
 const compact = require('./compact-vars');
+const aleoUI = require('./aleo-ui-vars');
 
 genCss(
   path.join(__dirname, '..'),
@@ -17,6 +18,7 @@ genCss(
         ...dark,
         '@site-text-color': '@heading-color',
         '@site-markdown-code-bg': '@input-bg',
+        ...aleoUI,
       },
     },
     {
