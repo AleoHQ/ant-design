@@ -110,7 +110,7 @@
     "ie >= 11"
   ],
   "dependencies": {
-    "@aleohq/ui": "^1.0.4",
+    "@aleohq/ui": "^1.0.6",
     "@ant-design/colors": "^6.0.0",
     "@ant-design/icons": "^4.5.0",
     "@ant-design/react-slick": "~0.28.1",
