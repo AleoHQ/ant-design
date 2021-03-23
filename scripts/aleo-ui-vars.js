@@ -44,13 +44,6 @@ const antdPalleteLess = lessToJs(`${antdLess}`, {
   resolveVariables: false,
 });
 
-console.log({
-  ...colorsGreyPalleteLess,
-  ...colorsRedPalleteLess,
-  ...antdColorsPalleteLess,
-  ...antdPalleteLess,
-});
-
 module.exports = {
   ...colorsGreyPalleteLess,
   ...colorsRedPalleteLess,
